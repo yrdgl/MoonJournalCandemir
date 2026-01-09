@@ -248,6 +248,32 @@
         </footer>
     </div>
     
+    <!-- Firebase SDK -->
+    <script type="module">
+      // Firebase SDK ekle
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-analytics.js";
+      import { getFirestore } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.js";
+    
+      // Firebase yapılandırman
+      const firebaseConfig = {
+        apiKey: "AIzaSyD65Tk3NlE_57kd-AgFvjTUvHOMsMCjU_U",
+        authDomain: "moonjournalapp-2ef4c.firebaseapp.com",
+        projectId: "moonjournalapp-2ef4c",
+        storageBucket: "moonjournalapp-2ef4c.firebasestorage.app",
+        messagingSenderId: "123792296874",
+        appId: "1:123792296874:web:909a01f5427770666df9d3",
+        measurementId: "G-2SHMSM91HZ"
+      };
+    
+      // Firebase'i başlat
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      const db = getFirestore(app); // 🔥 Firestore veritabanına erişim
+    
+      console.log("Firebase başarıyla bağlandı!"); // Test için
+    </script>
+    
     <script>
         // Tarih güncelleme
         function updateDate() {
